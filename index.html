@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMAGE-CHANGER</title>
+ <style>
+body{
+    background-color: black;
+    color: whitesmoke;
+   text-align: center;
+
+    }
+    .image-container img{
+        margin-top: 100px;
+        height: 300px;
+        border-radius: 10px ;
+        border: 2px solid red;
+ }
+ .image-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+ }
+    .image-container h2{
+         background-color: blue;
+         padding: 10px;
+         border-radius: 10px;
+         border: 1px solid red;
+
+    }
+    
+
+ </style>
+
+</head>
+<body>
+    <h1>IMAGE-CHANGER</h1>
+<div class="image-container">
+<img src="bombay.jpg" alt="City of Dreams">
+<h2 id="H1">Bombay</h2>
+
+</div>
+
+    <script>
+  let img = document.querySelector('img');
+  let h2 = document.querySelector('h2')
+  let prevsrc = img.src
+  let prevtext = h2.innerText
+
+  img.addEventListener('mouseover',()=>{
+    img.src = "london.jpg"
+    h2.innerText='paris'
+  })
+img.addEventListener('mouseleave',()=>{
+  img.src = 'bombay.jpg'
+  h2.innerText = 'Bombay'
+})
+
+
+    </script>
+    
+</body>
+</html>
